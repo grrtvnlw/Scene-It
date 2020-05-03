@@ -31,9 +31,9 @@ myForm.addEventListener('submit', (e) => {
 
   function renderMovies(movieArray) {
     let movieHtmlArray = movieArray.map(currentMovie => {
-      // console.log(movieArray)
       axios.get("http://www.omdbapi.com/?apikey=efe3c50b&i=" + currentMovie.imdbID)
         .then(function (response) {
+          console.log(response.data.Title)
           moviesContainer.innerHTML += (`
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
               <div class="card w-100 h-100 d-flex flex-column">
@@ -41,7 +41,7 @@ myForm.addEventListener('submit', (e) => {
                   <img class="card-img-top" src="${response.data.Poster}" onerror="if (this.src != 'no_image.png') this.src='no_image.png';" alt="Card image cap">
                 </div>
                 <div class="card-body d-flex flex-column justify-content-between align-items-center p-0 pt-2 m-0 overflow-auto" style="height: 25%">
-                  <h5 class="card-title text-center m-0 p-0 font-weight-bold">${response.data.Title}</h5>
+                  <a href="https://en.wikipedia.org/wiki/${response.data.Title}" target="_blank"><h5 class="card-title text-center m-0 p-0 font-weight-bold">${response.data.Title}</h5></a>
                   <div class="dropdown d-flex align-items-center m-0 p-0 pt-2">
                     <p class="card-text mr-4 m-0 p-0">${response.data.Year}</p>
                     <!-- Button trigger modal -->
