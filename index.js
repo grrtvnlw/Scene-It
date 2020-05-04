@@ -45,7 +45,7 @@ $('#search-form').on('submit' , function(e) {
                   <div class="dropdown d-flex align-items-center m-0 p-0 pt-2">
                     <p class="card-text mr-4 m-0 p-0">${response.data.Year}</p>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-dark m-0 p-0" data-toggle="modal" data-target="#${response.data.imdbID}">
+                    <button type="button" class="btn btn-dark m-0 p-0 swell" data-toggle="modal" data-target="#${response.data.imdbID}">
                       Plot
                     </button>
                     <!-- Modal -->
@@ -101,9 +101,19 @@ function renderMovies(movieArray) {
                 <div class="dropdown d-flex align-items-center m-0 p-0 pt-2">
                   <p class="card-text mr-4 m-0 p-0">${response.data.Year}</p>
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-dark m-0 p-0" data-toggle="modal" data-target="#${response.data.imdbID}">
+                  <button type="button" class="btn btn-dark m-0 p-0 swell" data-toggle="modal" data-target="#${response.data.imdbID}">
                     Plot
                   </button>
+                  <div class="rating d-flex flex-row pl-4 justify content-between">
+                  <!-- Thumbs up -->
+                    <div class="like grow mr-1" onclick="likeDislike('${response.data.imdbID}')">
+                      <i class="fa fa-thumbs-up like" aria-hidden="true"></i>
+                    </div>
+                  <!-- Thumbs down -->
+                    <div class="dislike grow" onclick="likeDislike('${response.data.imdbID}')">
+                      <i class="fa fa-thumbs-down like" aria-hidden="true"></i>
+                    </div>
+                  </div>
                   <!-- Modal -->
                   <div class="modal fade" id="${response.data.imdbID}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -140,6 +150,30 @@ function renderMovies(movieArray) {
     const joined = movieHtmlArray.join('');
     return joined;
 }
+
+function likeDislike(imdbID) {
+  console.log(imdbID)
+  let watchlistJSON = localStorage.getItem('watchlist');
+  let watchlist = JSON.parse(watchlistJSON);
+  const movie = watchlist.find(currentMovie => currentMovie.imdbID == imdbID);
+  console.log(movie);
+  let liked = "Liked";
+  movie[liked] == true;
+  watchlistJSON = JSON.stringify(watchlist);
+  localStorage.setItem('watchlist', watchlistJSON);
+  console.log(movie)
+    // $('#movies-container').html(renderMovies(watchlist));
+  // });
+  // $(movie).addClass('active');
+  // $('.active').removeClass('active');
+}
+
+// $('.like, .dislike').on('click', function(e) {
+//   e.preventDefault();
+//   console.log("hello")
+//   $(this).addClass('active');
+//   $('.active').removeClass('active');
+// });
 
 function removeFromWatchlist(imdbID) {
   let watchlistJSON = localStorage.getItem('watchlist');
