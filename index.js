@@ -162,18 +162,7 @@ function likeDislike(imdbID) {
   watchlistJSON = JSON.stringify(watchlist);
   localStorage.setItem('watchlist', watchlistJSON);
   console.log(movie)
-    // $('#movies-container').html(renderMovies(watchlist));
-  // });
-  // $(movie).addClass('active');
-  // $('.active').removeClass('active');
 }
-
-// $('.like, .dislike').on('click', function(e) {
-//   e.preventDefault();
-//   console.log("hello")
-//   $(this).addClass('active');
-//   $('.active').removeClass('active');
-// });
 
 function removeFromWatchlist(imdbID) {
   let watchlistJSON = localStorage.getItem('watchlist');
