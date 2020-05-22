@@ -22,7 +22,7 @@ $('#search-form').on('submit' , function(e) {
   e.preventDefault();
   let searchString = $('.search-bar').val()
   let urlEncodedSearchString = encodeURIComponent(searchString)
-  axios.get("http://www.omdbapi.com/?apikey=efe3c50b&s=" + urlEncodedSearchString)
+  axios.get("https://www.omdbapi.com/?apikey=efe3c50b&s=" + urlEncodedSearchString)
     .then(response => {
       movies = response.data.Search
       let movieHTML = renderMovies(movies);
@@ -32,7 +32,7 @@ $('#search-form').on('submit' , function(e) {
   
   function renderMovies(movieArray) {
     let movieHtmlArray = movieArray.map(currentMovie => {
-      axios.get("http://www.omdbapi.com/?apikey=efe3c50b&i=" + currentMovie.imdbID)
+      axios.get("https://www.omdbapi.com/?apikey=efe3c50b&i=" + currentMovie.imdbID)
         .then(function (response) {
           $('.movies-container').append((`
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
@@ -88,7 +88,7 @@ $('#search-form').on('submit' , function(e) {
 
 function renderMovies(movieArray) {
   let movieHtmlArray = movieArray.map(currentMovie => {
-    axios.get("http://www.omdbapi.com/?apikey=efe3c50b&i=" + currentMovie.imdbID)
+    axios.get("https://www.omdbapi.com/?apikey=efe3c50b&i=" + currentMovie.imdbID)
       .then(function (response) {
         $('#movies-container').append((`
           <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
@@ -162,18 +162,7 @@ function likeDislike(imdbID) {
   watchlistJSON = JSON.stringify(watchlist);
   localStorage.setItem('watchlist', watchlistJSON);
   console.log(movie)
-    // $('#movies-container').html(renderMovies(watchlist));
-  // });
-  // $(movie).addClass('active');
-  // $('.active').removeClass('active');
 }
-
-// $('.like, .dislike').on('click', function(e) {
-//   e.preventDefault();
-//   console.log("hello")
-//   $(this).addClass('active');
-//   $('.active').removeClass('active');
-// });
 
 function removeFromWatchlist(imdbID) {
   let watchlistJSON = localStorage.getItem('watchlist');
