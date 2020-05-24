@@ -4,8 +4,14 @@
 - What It Is
 - What I Used
 - Challenges and Solutions
-- MVP
+- Minimum Viable Product
 - Stretch Goals
 - Screenshots
-- Github Link
 - Code Examples
+## What It Is
+## What I Used
+## Challenges and Solutions
+## Minimum Viable Product
+## Stretch Goals
+## Screenshots
+## Code Examples
