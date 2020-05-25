@@ -20,16 +20,18 @@ I used Axios and Promise Objects to make requests to the OMBb API, and render fu
 - Bootstrap
 - HTML/CSS
 ## Challenges and Solutions
-- Challenge #1: Requesting and Handling Data from an API<br />
-<br />
-This project was my first experience requesting data from an API, handling the response, and formatting the response data in a way that is useful and aesthetically pleasing to the user. I learned how to pass requests for specific data based off a user's seach to the API; this taught me how to read, comprehend, and implement API documentation. As a result of making requests this way I also had to learn about asynchronous JavaScript and Promises. I used the Axios library to make `.get` requests to the API, and used `.then` to handle the Promise Object that was returned from the request. <br />
+- Challenge #1: Requesting and Handling Data from an API
 
-- Challenge #2: Formatting and Rendering Data to the DOM<br />
-<br />
-The Promise Object from the `.then` method is passed to a render function. The render function uses template literals with inline Bootstrap to style the data. The necessary data for each movie, such as the movie image, title, year of release, and plot are accessed and saved using embedded expressions. The formatted data is then appended to the DOM using jQuery, i.e. `$('.movies-container').html(movieHTML);`.<br />
-- Challenge #3: Saving Data To and Loading Data From Local Storage<br />
-<br />
-An additional challenge with this project was learning how to use local storage and understanding how to work with JSON data. I learned about methods such as `JSON.parse` and `JSON.stringify` to convert JSON data into a JavaScript Object and vice versa. I also learned to use local storage methods such as `localStorage.getItem()` and `localStorage.setItem()` to save the users' watchlist data to their browser.<br />
+This project was my first experience requesting data from an API, handling the response, and formatting the response data in a way that is useful and aesthetically pleasing to the user. I learned how to pass requests for specific data based off a user's seach to the API; this taught me how to read, comprehend, and implement API documentation. As a result of making requests this way I also had to learn about asynchronous JavaScript and Promises. I used the Axios library to make `.get` requests to the API, and used `.then` to handle the Promise Object that was returned from the request.
+
+- Challenge #2: Formatting and Rendering Data to the DOM<
+
+The Promise Object from the `.then` method is passed to a render function. The render function uses template literals with inline Bootstrap to style the data. The necessary data for each movie, such as the movie image, title, year of release, and plot are accessed and saved using embedded expressions. The formatted data is then appended to the DOM using jQuery, i.e. `$('.movies-container').html(movieHTML);`.
+
+- Challenge #3: Saving Data To and Loading Data From Local Storage
+
+An additional challenge with this project was learning how to use local storage and understanding how to work with JSON data. I learned about methods such as `JSON.parse` and `JSON.stringify` to convert JSON data into a JavaScript Object and vice versa. I also learned to use local storage methods such as `localStorage.getItem()` and `localStorage.setItem()` to save the users' watchlist data to their browser.
+
 ## Minimum Viable Product
 ## Stretch Goals
 ## Screenshots
