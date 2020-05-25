@@ -22,7 +22,7 @@ I used Axios and Promise Objects to make requests to the OMBb API, and render fu
 ## Challenges and Solutions
 - Challenge #1: Requesting and Handling Data from an API
 
-This project was my first experience requesting data from an API, handling the response, and formatting the response data in a way that would be useful and aesthetically pleasing to the user. Because each request to the API is unique to the specific movie the user searches for, I learned to read and understand the API documentation, and write code that would return the specifc movie the user searched for. In order to make this work with the OMDb API, I had to pass the movie title along with the API key to the API. I used the Axios library to make `.get` requests to the API, and used `.then` to handle the Promise Object that was returned from the request.
+This project was my first experience requesting data from an API, handling the response, and formatting the response data in a way that would be useful and aesthetically pleasing to the user. Because each request to the API is unique to the specific movie the user searches for, I learned to read and understand the API documentation, and write code that would return the specifc movie the user searched for. In order to make this work with the OMDb API, I had to pass the movie title along with the API key to the API using the `encodeURIComponent()` JavaScript function. I used the Axios library to make `.get` requests to the API, and used `.then` to handle the Promise Object that was returned from the request.
 
 - Challenge #2: Formatting and Rendering Data to the DOM
 
@@ -30,7 +30,7 @@ The Promise Object from the `.then` method is passed to a render function. The r
 
 - Challenge #3: Saving Data To and Loading Data From Local Storage
 
-An additional challenge with this project was learning how to use local storage and understanding how to work with JSON data. I learned about methods such as `JSON.parse` and `JSON.stringify` to convert JSON data into a JavaScript Object and vice versa. I also learned to use local storage methods such as `localStorage.getItem()` and `localStorage.setItem()` to save the users' watchlist data to their browser.
+An additional challenge with this project was learning how to use local storage and understanding how to work with JSON data. I learned about methods such as `JSON.parse` and `JSON.stringify` to convert JSON data into a JavaScript Object that I could work with and vice versa. I also learned to use local storage methods such as `localStorage.getItem()` and `localStorage.setItem()` to save the user's watchlist data to their browser.
 
 ## Minimum Viable Product
 ## Stretch Goals
