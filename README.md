@@ -35,6 +35,12 @@ An additional challenge with this project was learning how to use local storage 
 - Challenge #4: Understanding .map() and .filter()
 
 ## Minimum Viable Product
+
+For this assignment, the minimum viable product was to build an app that would allow the user to search for a movie by it's title. The response data should then be rendered to the search page and the user should be able to save any movie to their watchlist, which would be placed into local storage.
+
 ## Stretch Goals
+
+I wanted to introduce some additional functionality into the app such as the ability to remove movies from the watchlist and prevent duplicate movies from being added to the watchlist. I also added hyperlinks to the result data that would take the user to the Wikipedia page or IMDb page of that particular movie. Finally, I thought it would be a nice feature if the user could give a movie in their watchlist a thumbs up or a thumbs down. This feature is still under construction.
+
 ## Screenshots
 ## Code Examples
