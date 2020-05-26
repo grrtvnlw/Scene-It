@@ -1,5 +1,4 @@
-// let movies = [];
-let watchlist = [];
+let movies = [];
 const watchlist = localStorage.getItem('watchlist')
 const parsedList = JSON.parse(watchlist)
 $('#movies-container').html(renderWatchlist(parsedList));
