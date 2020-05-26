@@ -39,7 +39,7 @@ $('#search-form').on('submit' , function(e) {
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
               <div class="card w-100 h-100 d-flex flex-column">
                 <div class="d-flex" style="height: 65%">
-                  <img class="card-img-top" src="${response.data.Poster}" onerror="if (this.src != 'no_image.png') this.src='assets/no_image.png';" alt="Card image cap">
+                  <img class="card-img-top w-100 h-100" src="${response.data.Poster}" onerror="if (this.src != 'no_image.png') this.src='assets/no_image.png';" alt="Card image cap">
                 </div>
                 <div class="card-body d-flex flex-column justify-content-between align-items-center p-0 pt-2 m-0 overflow-auto" style="height: 27%">
                   <a href="https://en.wikipedia.org/wiki/${response.data.Title}" target="_blank"><h5 class="card-title text-center m-0 p-0 font-weight-bold">${response.data.Title}</h5></a>
