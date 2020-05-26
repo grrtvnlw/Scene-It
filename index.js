@@ -1,7 +1,8 @@
-let movies = [];
+// let movies = [];
+let watchlist = [];
 const watchlist = localStorage.getItem('watchlist')
 const parsedList = JSON.parse(watchlist)
-$('#movies-container').html(renderMovies(parsedList));
+$('#movies-container').html(renderWatchlist(parsedList));
 
 function saveToWatchlist(imdbID) {
   const movie = movies.find(currentMovie => currentMovie.imdbID == imdbID);
@@ -34,6 +35,7 @@ $('#search-form').on('submit' , function(e) {
     let movieHtmlArray = movieArray.map(currentMovie => {
       axios.get("https://www.omdbapi.com/?apikey=efe3c50b&i=" + currentMovie.imdbID)
         .then(function (response) {
+          console.log(response)
           $('.movies-container').append((`
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
               <div class="card w-100 h-100 d-flex flex-column">
@@ -86,7 +88,10 @@ $('#search-form').on('submit' , function(e) {
   };
 });
 
-function renderMovies(movieArray) {
+function renderWatchlist(movieArray) {
+  if (movieArray == null) {
+    movieArray = [];
+  }
   let movieHtmlArray = movieArray.map(currentMovie => {
     axios.get("https://www.omdbapi.com/?apikey=efe3c50b&i=" + currentMovie.imdbID)
       .then(function (response) {
@@ -173,5 +178,5 @@ function removeFromWatchlist(imdbID) {
   });
   watchlistJSON = JSON.stringify(updatedWatchlist);
   localStorage.setItem('watchlist', watchlistJSON);
-  $('#movies-container').html(renderMovies(updatedWatchlist));
+  $('#movies-container').html(renderWatchlist(updatedWatchlist));
 }
