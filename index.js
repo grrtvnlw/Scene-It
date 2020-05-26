@@ -36,7 +36,7 @@ $('#search-form').on('submit' , function(e) {
         .then(function (response) {
           console.log(response)
           $('.movies-container').append((`
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
               <div class="card w-100 h-100 d-flex flex-column">
                 <div class="d-flex" style="height: 65%">
                   <img class="card-img-top w-100 h-100" src="${response.data.Poster}" onerror="if (this.src != 'no_image.png') this.src='assets/no_image.png';" alt="Card image cap">
@@ -95,7 +95,7 @@ function renderWatchlist(movieArray) {
     axios.get("https://www.omdbapi.com/?apikey=efe3c50b&i=" + currentMovie.imdbID)
       .then(function (response) {
         $('#movies-container').append((`
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
             <div class="card w-100 h-100 d-flex flex-column">
               <div class="d-flex" style="height: 65%">
                 <img class="card-img-top w-100 h-100" src="${response.data.Poster}" onerror="if (this.src != 'no_image.png') this.src='assets/no_image.png';" alt="Card image cap">
