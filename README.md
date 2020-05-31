@@ -12,7 +12,7 @@
 Using the OMDb API, Scene It allows a user to search for any movie in the API and save that movie to their personal
 watchlist via local storage in the browser. The user is able to switch back and forth between their watchlist and the movie search page. 
 
-I used Axios and Promise Objects to make requests to the OMBb API, and render functions with template literals and Bootstrap to format the JSON data coming back from the API and jQuery to add the formatted data to the DOM.
+I used Axios and Promise Objects to make requests to the OMBb API, render functions with template literals and Bootstrap to format the JSON data coming back from the API, and jQuery to add the formatted data to the DOM.
 ## What I Used
 - JavaScript
 - jQuery
