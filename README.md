@@ -22,7 +22,7 @@ I used Axios and Promise Objects to make requests to the OMBb API, render functi
 ## Challenges and Solutions
 - Challenge #1: Requesting and Handling Data from an API
 
-This project was my first experience requesting data from an API, handling the response, and formatting the response data in a way that would be useful and aesthetically pleasing to the user. Because each request to the API is unique to the specific movie the user searches for, I learned to read and understand the API documentation, and write code that would return the specifc movie the user searched for. In order to make this work with the OMDb API, I had to pass the movie title along with the API key to the API using the `encodeURIComponent()` JavaScript function. I used the Axios library to make `.get` requests to the API, and used `.then` to handle the Promise Object that was returned from the request.
+This project was my first experience requesting data from an API, handling the response, and formatting the response data in a way that would be useful and aesthetically pleasing to the user. Because each request to the API is unique to the specific movie the user searches for, I learned to read and understand the API documentation, and write code that would return the specific movie the user searched for. In order to make this work with the OMDb API, I had to pass the movie title along with the API key to the API using the `encodeURIComponent()` JavaScript function. I used the Axios library to make `.get` requests to the API, and used `.then` to handle the Promise Object that was returned from the request.
 
 - Challenge #2: Formatting and Rendering Data to the DOM
 
