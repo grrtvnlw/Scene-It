@@ -30,9 +30,7 @@ The Promise Object from the `.then` method is passed to a render function. The r
 
 - Challenge #3: Saving Data To and Loading Data From Local Storage
 
-An additional challenge with this project was learning how to use local storage and understanding how to work with JSON data. I learned about methods such as `JSON.parse` and `JSON.stringify` to convert JSON data into a JavaScript Object that I could work with and vice versa. I also learned to use local storage methods such as `localStorage.getItem()` and `localStorage.setItem()` to save the user's watchlist data to their browser.
-
-- Challenge #4: Understanding .map() and .filter()
+An additional challenge with this project was learning how to use local storage and understanding how to work with JSON data. I learned about methods such as `JSON.parse` and `JSON.stringify` to convert JSON data into a JavaScript Object that I could work with and then convert back into a JSON string that I could store. I also learned to use local storage methods such as `localStorage.getItem()` and `localStorage.setItem()` to save the user's watchlist data to their browser.
 
 ## Minimum Viable Product
 
