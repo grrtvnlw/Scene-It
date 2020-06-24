@@ -34,7 +34,6 @@ $('#search-form').on('submit' , function(e) {
     let movieHtmlArray = movieArray.map(currentMovie => {
       axios.get("https://www.omdbapi.com/?apikey=efe3c50b&i=" + currentMovie.imdbID)
         .then(function (response) {
-          console.log(response)
           $('.movies-container').append((`
             <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-3">
               <div class="card w-100 h-100 d-flex flex-column">
@@ -156,16 +155,13 @@ function renderWatchlist(movieArray) {
 }
 
 function likeDislike(imdbID) {
-  console.log(imdbID)
   let watchlistJSON = localStorage.getItem('watchlist');
   let watchlist = JSON.parse(watchlistJSON);
   const movie = watchlist.find(currentMovie => currentMovie.imdbID == imdbID);
-  console.log(movie);
   let liked = "Liked";
   movie[liked] == true;
   watchlistJSON = JSON.stringify(watchlist);
   localStorage.setItem('watchlist', watchlistJSON);
-  console.log(movie)
 }
 
 function removeFromWatchlist(imdbID) {
